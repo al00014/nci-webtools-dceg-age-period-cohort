@@ -102,11 +102,9 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div class="form-group">
                                 <label>Copy and paste into table on right or upload a csv with population and count information.</label>
                             </div>
-
                             <div class="row">
                                 <div class="col-xs-12">
                                     <legend>
@@ -121,14 +119,13 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <div class="col-xs-12">
+                                <div class="col-xs-12">
+                                    <div class="form-group">
                                         <label for="inputfile1" class="sr-only">Data File 1 Upload</label>
                                         <input type="file" data-target="title1" class="vertical-spacer" id="inputfile1" accept=".csv">
                                     </div>
                                 </div>
                             </div>
-
                             <div class="row">
                                 <div class="col-xs-12">
                                     <legend>Data File 2</legend>
@@ -141,17 +138,33 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <div class="col-xs-12">
+                                <div class="col-xs-12">
+                                    <div class="form-group">
                                         <label for="inputfile2" class="sr-only">Data File 2 Upload</label>
                                         <input type="file" data-target="title2" class="vertical-spacer" id="inputfile2" accept=".csv">
                                     </div>
                                 </div>
                             </div>
-
                             <div class="btn-toolbar offset">
                                 <button type="button" id="modelBt" class="btn btn-primary btn-sm pull-right">Calculate</button>
                                 <button type="reset" id="resetBt" class="btn btn-default btn-sm pull-right">Clear</button>
+                            </div>
+                            <div id="download_section" class="row">
+                                <div class="col-xs-12">
+                                    <div class="form-group">
+                                        <label for="download_selector">Select download format</label>
+                                        <div class="form-horizontal">
+                                            <select id="download_selector" class="input-tiny input-sm">
+                                                <option id="RDataInput">R-Studio Input</option>
+                                                <option id="RDataOutput">R-Studio Output</option>
+                                                <option id="TextInput">Text Input</option>
+                                                <option id="TextOutput">Text Output</option>
+                                                <option id="Excel">Excel Output</option>
+                                            </select>
+                                            <button type="button" id="download" class="btn btn-primary btn-sm">Download</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </form>
                     </div>

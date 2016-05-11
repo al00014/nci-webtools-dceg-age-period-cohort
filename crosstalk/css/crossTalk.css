@@ -1019,7 +1019,8 @@ table.dataTable thead .sorting_desc {
 }
 
 .output:not(.show),
-#irrGraphs img:not(.show) {
+#irrGraphs img:not(.show),
+#download_section:not(.show) {
     display: none;
 }
 

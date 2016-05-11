@@ -98,9 +98,11 @@ $(document).ready(function () {
         target.add($('#' + id.substr(0, id.length - 2))).parent().children().toggleClass('active');
     });
 
-    $('#modelBt').click(crosstalk.validate);
-
-    $('[type="reset"]').click(crosstalk.reset);
+    $('#modelBt').on('click',crosstalk.validate);
+    $('[type="reset"]').on('click',crosstalk.reset);
+    $('#download').on('click',function() {
+      window.location = $("#download_selector").val();
+    });
     crosstalk.reset();
 });
 
@@ -301,7 +303,7 @@ var crosstalk = (function ($, ReadFile) {
 
                 $('#ratePane,#showPlot, #apcRatePane, #apcRatioPane').addClass('show');
             }
-            $(".output").addClass("show");
+            $(".output,#download_section").addClass("show");
             $("ul.nav.nav-pills li").removeClass("disabled");
 
             // bind events to newly generated images
@@ -329,11 +331,11 @@ var crosstalk = (function ($, ReadFile) {
         $(".submitted").removeClass("submitted");
 
         $(".graphContainers").empty();
-        $('.output').removeClass('show');
+        $(".output,#download_section").removeClass('show');
 
         $("ul.nav.nav-pills li").not(":first").not(":last").addClass("disabled");
 
-        $('#description,#startAge,#startYear,#interval,#title1,#title2').val("");
+        $("#description,#startAge,#startYear,#interval,#title1,#title2").val("");
         crosstalk.update();
 
         $(".tablesContainers table").each(function () {
